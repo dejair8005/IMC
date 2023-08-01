@@ -9,8 +9,9 @@ export default props => {
             <Text> Resultado </Text>
             <View>
                 <Text>{props.imc}</Text>
+                <Text></Text>
             </View>
-            <View><Text> Classificação </Text></View>
+            <View><Text>{props.faixa}</Text></View>
             <Tabela/>
             
         </View>

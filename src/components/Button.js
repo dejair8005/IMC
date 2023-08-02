@@ -5,7 +5,6 @@ export default props => {
 
 function botaoteste(){
     return <Text>Teste</Text>
-
 }
  
 //const imc = peso / (altura * altura)

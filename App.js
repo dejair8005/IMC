@@ -44,7 +44,7 @@ export default function App() {
         
       </View>
 
-
+      {imc !== 0?    
       <View style={{flex:1}}>
         <Text>Resuldado</Text>
         
@@ -54,6 +54,7 @@ export default function App() {
         </Text>
         
       </View>
+      : false}
     </View>
     
   );

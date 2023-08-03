@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, TextInput } from 'react-native';
+import { Text,  } from 'react-native';
 import Button from './Button';
 export default props => {
    const[altura, setAltura] = useState('')

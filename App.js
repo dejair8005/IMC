@@ -2,9 +2,15 @@ import React, { Component, useState } from 'react'
 import { View, Text, StyleSheet, TextInput, Button } from 'react-native'
 
 
+import Imput from './src/componentes/Imput'
+
+
 export default function App() {
 
-  const [altura, setAltura]=useState('0');
+  let txta = "Digite sua altura ex: 1.80"
+  let txtp = "Digite seu peso ex 63.0"
+
+  /*const [altura, setAltura]=useState('0');
   const [peso, setPeso]=useState('0');
   const [imc, setImc]=useState (0);
 
@@ -12,7 +18,7 @@ export default function App() {
     const calculatedimc = p / (a * a)
     setImc(calculatedimc)
     
-  };
+  };*/
   
 
 
@@ -21,32 +27,37 @@ export default function App() {
     <View style={styles.container}>
       <View style={{flex:2}}>
         <Text>Calculadora de IMC</Text>
-        <TextInput
-         placeholder="Digite sua altura ex: 1.80"
-         keyboardType="numeric"   
-         onChangeText={(valor)=>{setAltura(valor)}}
+
+
+        <Imput txt={txta}/>
+        <Imput txt={txtp}/>
+
+        <Button
+        title="Calcular"
+        
         />
         
-        <TextInput
-          placeholder="Digite seu peso ex 63.0"
-          keyboardType="numeric"
-          onChangeText={(valor)=>{setPeso(valor)}}
-        />
 
         {/* Use an arrow function as the callback 
         
         <Button
-          title="Calcular"
+          
           onPress={() => {
             calcimc(parseFloat(altura), parseFloat(peso));
           }}
-        />  */}
-            
+        />  */}         
             
         
       </View>
 
-      {imc !== 0?    
+
+
+
+
+
+
+
+      {/*imc !== 0?    
       <View style={{flex:1}}>
         <Text>Resuldado</Text>
         
@@ -56,7 +67,8 @@ export default function App() {
         </Text>
         
       </View>
-      : false}
+      : false*/}
+
     </View>
     
   );

@@ -33,13 +33,15 @@ export default function App() {
           onChangeText={(valor)=>{setPeso(valor)}}
         />
 
-        {/* Use an arrow function as the callback */}
+        {/* Use an arrow function as the callback 
+        
         <Button
           title="Calcular"
           onPress={() => {
             calcimc(parseFloat(altura), parseFloat(peso));
           }}
-        />      
+        />  */}
+            
             
         
       </View>

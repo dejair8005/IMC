@@ -10,15 +10,17 @@ export default function App() {
   let txta = "Digite sua altura ex: 1.80"
   let txtp = "Digite seu peso ex 63.0"
 
-  /*const [altura, setAltura]=useState('0');
+  
+  const [altura, setAltura]=useState('0');
   const [peso, setPeso]=useState('0');
-  const [imc, setImc]=useState (0);
 
+
+  
+  const [imc, setImc]=useState (0);
   const calcimc = (a,p)=>{
     const calculatedimc = p / (a * a)
-    setImc(calculatedimc)
-    
-  };*/
+    setImc(calculatedimc)    
+  };
   
 
 
@@ -26,38 +28,23 @@ export default function App() {
   return (
     <View style={styles.container}>
       <View style={{flex:2}}>
-        <Text>Calculadora de IMC</Text>
+          <Text style={styles.title}>Calculadora de IMC</Text>
 
 
-        <Imput txt={txta}/>
-        <Imput txt={txtp}/>
-
-        <Button
-        title="Calcular"
-        
-        />
-        
-
-        {/* Use an arrow function as the callback 
-        
-        <Button
+          <Imput txt={txta} valor={(n)=>{setAltura(n)}}/>
+          <Imput txt={txtp} valor={(n)=>{setPeso(n)}}/>
           
+          <Button
+          title="Calcular"
           onPress={() => {
             calcimc(parseFloat(altura), parseFloat(peso));
           }}
-        />  */}         
-            
-        
+          
+          />  
       </View>
 
 
-
-
-
-
-
-
-      {/*imc !== 0?    
+      {imc !== 0?    
       <View style={{flex:1}}>
         <Text>Resuldado</Text>
         
@@ -67,7 +54,7 @@ export default function App() {
         </Text>
         
       </View>
-      : false*/}
+      : false}
 
     </View>
     
@@ -81,6 +68,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  title: {
+    fontSize: 40
+  }
 });
 
 

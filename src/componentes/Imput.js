@@ -11,7 +11,8 @@ export default function Imput(props) {
     <View>
       <TextInput
          placeholder={props.txt}
-         keyboardType="numeric"            
+         keyboardType="numeric"
+         onChangeText={props.valor}            
         />        
     </View>
         

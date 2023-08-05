@@ -1,6 +1,7 @@
 import React, { Component, useState } from 'react'
 import { View, Text, StyleSheet, TextInput, Button } from 'react-native'
 
+// criar estilo em um Arquivo separado
 
 import Imput from './src/componentes/Imput'
 
@@ -74,6 +75,3 @@ const styles = StyleSheet.create({
 });
 
 
-/* Instruçoes para  interface, esse progama deve conter duas  telas uma para
-pegar os parametros para realizar o calculo e  outra para ser renderizada sobreponto
-a outra  que  foi utilizada para pega os parametros, e essa nova tela  deve conter o resultado contendo a classificacao*/ 

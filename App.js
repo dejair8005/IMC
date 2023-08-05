@@ -21,7 +21,7 @@ export default function App() {
   const [imc, setImc]=useState (0);
   const calcimc = (a,p)=>{
     const calculatedimc = p / (a * a)
-    setImc(calculatedimc)    
+    setImc(calculatedimc.toFixed(2))    
   };
   
 

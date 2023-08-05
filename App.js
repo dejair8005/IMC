@@ -1,9 +1,10 @@
 import React, { Component, useState } from 'react'
 import { View, Text, StyleSheet, TextInput, Button } from 'react-native'
 
-// criar estilo em um Arquivo separado
+
 
 import Imput from './src/componentes/Imput'
+import Estilos from './src/componentes/Estilos'
 
 
 export default function App() {
@@ -27,9 +28,9 @@ export default function App() {
 
 
   return (
-    <View style={styles.container}>
-      <View style={{flex:2}}>
-          <Text style={styles.title}>Calculadora de IMC</Text>
+    <View style={Estilos.conteiner}>
+      <View style={Estilos.Display1}>
+          <Text style={Estilos.title}>Calculadora de IMC</Text>
 
 
           <Imput txt={txta} valor={(n)=>{setAltura(n)}}/>
@@ -45,8 +46,9 @@ export default function App() {
       </View>
 
 
+      <View style={Estilos.Display2}>
       {imc !== 0?    
-      <View style={{flex:1}}>
+      <View >
         <Text>Resuldado</Text>
         
         <Text>
@@ -57,21 +59,13 @@ export default function App() {
       </View>
       : false}
 
+     </View>   
+
     </View>
     
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#ccd6bd',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 40
-  }
-});
+
 
 
